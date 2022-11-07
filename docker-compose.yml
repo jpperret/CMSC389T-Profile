@@ -3,6 +3,12 @@ version: '3'
 services:
   nodejs:
     #fill out the configuration here
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: node-web-app
+    container_name: website
+    restart: unless-stopped
     networks:
       - app-network
   
@@ -27,8 +33,8 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      #fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+      # absolute path to folder
+      device: /Users/DJake/Documents/College/CMSC389T/CMSC389T-Profile
       o: bind
 
 networks:
