@@ -7,13 +7,13 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      name: testing
-      uses: appleby/ssh-action@master
-      with: 
-        host: ${{secrets.HOST}}
-        username: ${{secrets.USERNAME}}
-        password: ${{secrets.PASSWORD}}
-        port: ${{secrets.PORT}}
-        script: |
-          cd CMSC389T-Profile
-          git pull
+      - name: testing
+        uses: appleby/ssh-action@master
+        with: 
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
+          port: ${{secrets.PORT}}
+          script: |
+            cd CMSC389T-Profile
+            git pull
