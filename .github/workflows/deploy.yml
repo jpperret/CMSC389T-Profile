@@ -15,5 +15,5 @@ jobs:
           password: ${{secrets.PASSWORD}}
           port: ${{secrets.PORT}}
           script: |
-            cd CMSC389T-Profile
+            cd /pub/jperret/CMSC389T-Profile
             git pull
